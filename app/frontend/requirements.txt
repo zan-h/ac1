@@ -1,0 +1,11 @@
+# Chainlit & Realtime Assistant
+chainlit>=1.0.0
+openai>=1.3.0
+websockets>=14.1
+
+# Additional tools for therapeutic features
+yfinance>=0.2.0
+plotly>=5.17.0
+
+# Environment management
+python-dotenv>=1.0.0

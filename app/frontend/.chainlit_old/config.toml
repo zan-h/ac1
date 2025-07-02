@@ -1,0 +1,28 @@
+[project]
+# Name of the app and chatbot
+name = "AgencyCoachAI"
+
+# Description of the app
+description = "Therapeutic AI coach using motivational interviewing and body doubling"
+
+# Theme configuration
+[UI]
+# Primary color for the interface
+primary_color = "#2E7D4F"
+
+# Hide the header
+hide_cot = true
+
+[features]
+# Enable audio input for voice conversations
+audio_input = true
+
+# Enable multi-modal interactions
+multi_modal = true
+
+# Enable session persistence
+session_persistence = true
+
+[telemetry]
+# Optional: Enable telemetry for usage insights
+enabled = false
