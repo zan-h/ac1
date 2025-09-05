@@ -48,14 +48,14 @@ class DevRunner:
             return False
     
     def start_frontend(self):
-        """Start the Chainlit frontend."""
-        frontend_dir = self.project_root / "app" / "frontend"
+        """Start the Chainlit voice-first frontend (my_assistant.py)."""
+        frontend_dir = self.project_root  # run from project root for my_assistant.py
         
-        print("🎨 Starting Chainlit frontend...")
+        print("🎨 Starting Chainlit voice UI (my_assistant.py)...")
         
         try:
             process = subprocess.Popen(
-                ["chainlit", "run", "app.py", "--host", "0.0.0.0", "--port", "8001"],
+                ["chainlit", "run", "my_assistant.py", "--host", "0.0.0.0", "--port", "8001"],
                 cwd=frontend_dir,
                 stdout=subprocess.PIPE,
                 stderr=subprocess.STDOUT,
@@ -71,7 +71,7 @@ class DevRunner:
                 
             threading.Thread(target=monitor_frontend, daemon=True).start()
             
-            print("✓ Frontend started on http://localhost:8001")
+            print("✓ Voice UI started on http://localhost:8001")
             return True
             
         except Exception as e:
